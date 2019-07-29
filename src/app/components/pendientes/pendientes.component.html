@@ -1,0 +1,194 @@
+<div class="main-content">
+    <div class="container-fluid">
+  
+      <div class="row">
+
+        <div id="table" class="col-md-12">
+  
+              <div class="card">
+    
+                  <div class="card-header card-header-icon card-header-warning">
+  
+                    <div class="card-icon">
+                          <i class="material-icons">timeline</i>
+                        </div>
+                      <h4 class="card-title">Incidentes  
+                          <small>- Pendientes</small>
+                        </h4>
+                  <div class="card-body">
+  
+                          <div class="material-datatables">
+                              <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%;font-size: small;">
+                                    <thead>
+                                        <tr>
+                                          <th>{{ dataTable.headerRow[0] }}</th>
+                                          <th>{{ dataTable.headerRow[1] }}</th>
+                                          <th>{{ dataTable.headerRow[2] }}</th>
+                                          <th style="width: 100px;">{{ dataTable.headerRow[3] }}</th>
+                                          <th>{{ dataTable.headerRow[4] }}</th>
+                                          <th>{{ dataTable.headerRow[5] }}</th>
+                                          <th class="disabled-sorting text-right"></th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                          <th>{{ dataTable.footerRow[0] }}</th>
+                                          <th>{{ dataTable.footerRow[1] }}</th>
+                                          <th>{{ dataTable.footerRow[2] }}</th>
+                                          <th>{{ dataTable.footerRow[3] }}</th>
+                                          <th>{{ dataTable.footerRow[4] }}</th>
+                                          <th>{{ dataTable.footerRow[5] }}</th>
+                                          <th class="text-right"></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr *ngFor="let row of dataTable.dataRows">
+                                            <td>{{row[0]}}</td>
+                                            <td>{{row[1]}}</td>
+                                            <td>{{row[2]}}</td>
+                                            <td>{{row[3]}}</td>
+                                            <td>{{row[4]}}</td>
+                                            <td>{{row[5]}}</td>
+                                            <td class="text-right">
+                                                
+                                                <a href="javascript:void(0" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">apps</i></a>
+                                              
+                                              </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                          </div>  
+
+                </div>
+              </div>
+            </div>
+        </div> 
+
+        <button id="btnModal" mat-raised-button class="" data-toggle="modal" data-target="#myModal">
+        </button>
+
+        <!-- Classic Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <div class="modal-header">
+
+                </div>
+
+                <div class="modal-body pb-0">
+
+                    <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-header-text card-header-warning">
+                                    <div class="card-text">
+                                        <h4 class="card-title">Nro. {{ this.dataTableModal.dataRows[0][0]  }}</h4>
+                                        <p class="card-category">Historia del Incidente</p>
+                                    </div>
+                                    </div>
+                                    <div class="card-body table-responsive">
+                                        <table class="table table-hover">
+                                                <thead class="text-warning">
+                                                    <tr>
+                                                        <th *ngFor="let cell of dataTableModal.headerRow">{{ cell }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let row of dataTableModal.dataRows">
+
+                                                            <td>{{row[1]}}</td>
+                                                            <td>{{row[2]}}</td>
+                                                            <td>{{row[3]}}</td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+  
+                </div>
+
+                <div class="modal-footer">
+                    <button mat-raised-button type="button" data-dismiss="modal" class="btn btn-link">Cerrrar</button>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <!--  End Modal -->
+    
+        <div id="timeline" class="col-md-3 d-none" >
+  
+            <div class="card">
+  
+                <div class="card-header card-header-icon card-header-warning">
+                    <div id="close" class="card-icon">
+                        <i class="material-icons">timeline</i>
+                    </div>
+                    <h4 class="card-title">Historia
+                      <small>de la solicitud</small>
+                      </h4>
+                </div>
+  
+                <div class="card-body" style="padding-top: 0px;padding-bottom: 20px;">
+            
+                    <ul class="timeline timeline-simple">
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge info">
+                                <i class="material-icons">card_travel</i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <span class="badge badge-info">Creacion</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se requiere armar una aplicacion para la carga de incidendes de forma dinamica y autonoma</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge success">
+                                <i class="material-icons">extension</i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <span class="badge badge-success">Edicion</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se genero el 4 de julio por el dpto de marketing y fue asignado a Sistemas
+                                </div>
+            
+                            </div>
+                        </li>
+            
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge warning">
+                                <i class="material-icons">fingerprint</i>
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <span class="badge badge-warning">Cierre</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Sistema tomo el incidente 3 dias despues que se genero y lo reeenvio a creditos</p>
+
+                                </div>
+                            </div>
+                        </li>
+            
+                    </ul>
+                </div>
+            
+            </div>
+          
+        </div>
+    
+      </div>  
+  
+    </div>
+</div>
+  

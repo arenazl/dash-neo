@@ -1,0 +1,38 @@
+[
+  {
+    "mes_desc": "Febrero",
+    "resueltas": 130,
+    "pendientes": 380,
+    "ingresadas": 90
+  },
+  {
+    "mes_desc": "Marzo",
+    "resueltas": 30,
+    "pendientes": 200,
+    "ingresadas": 100
+  },
+  {
+    "mes_desc": "Abril",
+    "resueltas": 79,
+    "pendientes": 400,
+    "ingresadas": 120
+  },
+  {
+    "mes_desc": "Mayo",
+    "resueltas": 150,
+    "pendientes": 500,
+    "ingresadas": 20
+  },
+  {
+    "mes_desc": "Junio",
+    "resueltas": 200,
+    "pendientes": 320,
+    "ingresadas": 20
+  },
+  {
+    "mes_desc": "Julio",
+    "resueltas": 50,
+    "pendientes": 280,
+    "ingresadas": 20
+  }
+]

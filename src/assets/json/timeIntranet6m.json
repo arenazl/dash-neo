@@ -1,0 +1,44 @@
+[
+  {
+    "mes_desc": "2012",
+    "resueltas": 600,
+    "pendientes": 100,
+    "ingresadas": 700
+  },
+  {
+    "mes_desc": "2013",
+    "resueltas": 650,
+    "pendientes": 300,
+    "ingresadas": 900
+  },
+  {
+    "mes_desc": "2014",
+    "resueltas": 700,
+    "pendientes": 300,
+    "ingresadas": 900
+  },
+  {
+    "mes_desc": "2015",
+    "resueltas": 650,
+    "pendientes": 300,
+    "ingresadas": 980
+  },
+  {
+    "mes_desc": "2016",
+    "resueltas": 600,
+    "pendientes": 200,
+    "ingresadas": 900
+  },
+  {
+    "mes_desc": "2017",
+    "resueltas": 560,
+    "pendientes": 200,
+    "ingresadas": 900
+  },
+  {
+    "mes_desc": "2018",
+    "resueltas": 600,
+    "pendientes": 100,
+    "ingresadas": 700
+  }
+]
